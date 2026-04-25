@@ -1,0 +1,5 @@
+If the 'test' job fails, the 'build-docker' job will NOT run because of
+the "needs: test" dependency. GitHub Actions automatically skips all
+downstream jobs when an upstream job fails. This is important because
+there is no point building a Docker image if the code is broken — it
+prevents bad code from ever reaching production.
