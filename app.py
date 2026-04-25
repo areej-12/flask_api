@@ -61,8 +61,5 @@ def delete_student(student_id):
     student = next((s for s in students if s['id'] == student_id), None)
     if student is None:
         return jsonify({'error': 'Student not found'}), 404
-    students = [s for s in students if s['id'] != student_id]
-    return jsonify({'message': 'Student deleted'}), 200
-
-if __name__ == '__main__':
+    students = [s for s in students if s['id'] != student_id]'status': 'ok', 'message': 'Flask is running'}), 500f __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
