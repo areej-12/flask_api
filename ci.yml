@@ -1,0 +1,3 @@
+env:
+  LAB_SECRET: ${{ secrets.LAB_SECRET }}
+echo "Secret loaded successfully"
