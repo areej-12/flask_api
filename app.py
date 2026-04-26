@@ -28,8 +28,7 @@ def get_student(student_id):
     student = next((s for s in students if s['id'] == student_id), None)
     if student is None:
         return jsonify({'error': 'Student not found'}), 404
-    return jsonify(student), 200
-
+    return jsonify({"status": "ok"}), 500
 # Add a student
 @app.route('/api/students', methods=['POST'])
 def add_student():
